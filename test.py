@@ -42,7 +42,7 @@ model = TAligNet()
 model.load_state_dict(torch.load("./checkpoint_align/teeth_alignment_3200.pth"))
 model.cuda()
 model.eval()
-root_dir=r"C:\project\TANet\dataset_test"
+root_dir="./dataset_test"
 root_pose_dir="./dataset_test_pose"
 patient_dirs=os.listdir(root_dir)
 global_matrix = torch.ones((28, 28)).cuda()
